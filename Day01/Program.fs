@@ -1,5 +1,6 @@
 ﻿open AoC2022.Utilities
 
+// Advent of Code 2022 day 1.
 [<EntryPoint>]
 let main argv =
     let caloriesList = 
