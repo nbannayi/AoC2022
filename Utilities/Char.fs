@@ -1,7 +1,7 @@
-﻿namespace AoC2022.Utilities 
+﻿namespace AoC2022.Utilities
 
-module Char = 
+module Char =
 
-   /// Convert a char to an int rather than the associated ASCII code. 
-   let toInt c =  
-       c |> (string >> int) 
+   /// Convert a char to an int rather than the associated ASCII code.
+   let toInt c =
+       c |> (string >> int)
