@@ -11,7 +11,7 @@ type Elf =
 
 module Elf =
 
-    /// Create an elf with a memory or n blizzard valleys configurations.
+    /// Create an elf with a memory or n blizzard valley configurations.
     let create n valley =        
         let valleys = [|0..n-1|] |> Array.scan (fun v _ -> v |> BlizzardValley.update) valley
         let position = valleys.[0] |> BlizzardValley.getStartPos
@@ -46,7 +46,7 @@ module Elf =
         [right;down;up;left;elfPos]
         |> List.filter (fun m -> m |> canMove)
 
-    /// Get shortest path from startPos to goalPos a given starting minute.
+    /// Get shortest path from startPos to goalPos at given starting minute.
     let getShortestPath startPos endPos minute elf =
         let queue   = Queue<Coordinate * int>([startPos,minute])
         let visited = HashSet<Coordinate * int>() // < this is important as removes dupes.
@@ -60,7 +60,7 @@ module Elf =
                 | false ->                                            
                     if not (visited.Contains(position,minute)) then
                         visited.Add(position,minute) |> ignore
-                        let moves = elf |> getMoves position (minute+1)
-                        for move in moves do
-                            queue.Enqueue(move,minute+1)
+                        elf
+                        |> getMoves position (minute+1)
+                        |> List.iter (fun m -> queue.Enqueue(m,minute+1))
         } |> Seq.head
