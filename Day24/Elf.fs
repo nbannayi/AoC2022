@@ -11,7 +11,7 @@ type Elf =
 
 module Elf =
 
-    /// Create an elf with a memory or n blizzard valley configurations.
+    /// Create an elf with a memory of n blizzard valley configurations.
     let create n valley =        
         let valleys = [|0..n-1|] |> Array.scan (fun v _ -> v |> BlizzardValley.update) valley
         let position = valleys.[0] |> BlizzardValley.getStartPos

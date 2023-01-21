@@ -105,7 +105,7 @@ module BlizzardValley =
         let x = [0..(valley.Grid |> Array2D.length1)] |> List.find (fun i -> valley.Grid.[i,0] = '.')
         {X = x; Y = 0}
 
-    /// Get goal position (gap om bottom wall.)
+    /// Get goal position (gap on bottom wall.)
     let getGoalPos (valley: BlizzardValley) =
         let x1 = (valley.Grid |> Array2D.length1)-1
         let x2 = (valley.Grid |> Array2D.length2)-1
