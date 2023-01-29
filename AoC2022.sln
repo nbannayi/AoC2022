@@ -39,7 +39,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InputFiles", "InputFiles", 
 		InputFiles\Day12Input.txt = InputFiles\Day12Input.txt
 		InputFiles\Day24Input.txt = InputFiles\Day24Input.txt
 		InputFiles\Day16Input.txt = InputFiles\Day16Input.txt
-		InputFiles\Day16InputExample.txt = InputFiles\Day16InputExample.txt
 	EndProjectSection
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Utilities", "Utilities\Utilities.fsproj", "{9D242DCD-55C6-47D9-850F-1F4E6CB2406A}"
